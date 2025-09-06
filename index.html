@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как я провёл лето</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333;}
+    header {background: #0077ff; color: white; padding: 15px; text-align: center;}
+    nav {display: flex; justify-content: center; gap: 20px; background: #005fcc; padding: 10px;}
+    nav a {color: white; text-decoration: none; font-weight: bold;}
+    nav a:hover {text-decoration: underline;}
+    section {padding: 20px; display: none;}
+    section.active {display: block;}
+    footer {background: #222; color: #aaa; text-align: center; padding: 15px; margin-top: 20px;}
+    img {max-width: 100%; border-radius: 10px; margin: 10px 0;}
+    iframe {width: 100%; height: 500px; border: none; border-radius: 10px;}
+    .highlight {font-weight: bold; color: #0077ff;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Как я провёл лето 🌞</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Главная</a>
+    <a href="#" onclick="showSection('trips')">Поездки</a>
+    <a href="#" onclick="showSection('movies')">Фильмы и Аниме</a>
+    <a href="#" onclick="showSection('it')">IT</a>
+    <a href="#" onclick="showSection('work')">Страдания</a>
+    <a href="#" onclick="showSection('proud')">Похвастаться</a>
+  </nav>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Добро пожаловать!</h2>
+      <p>Это мой сайт о том, как я провёл лето. Здесь есть всё: <span class="highlight">поездки, фильмы, IT, работа и достижения</span>.</p>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Лето море">
+    </section>
+
+    <section id="trips">
+      <h2>🚗 Поездки по Москве</h2>
+      <p>Летом я много ездил по Москве, открывал для себя новые места.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Moscow_Montage_2016.png/800px-Moscow_Montage_2016.png" alt="Москва">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.159546261256!2d37.61763531593027!3d55.75582698055325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5aa2f2a7bb%3A0x42eb9c8d205c3bd5!2z0JzQvtGB0LrQstCw0YAg0JzRg9GA0L7QstCw!5e0!3m2!1sru!2sru!4v1662976512345" allowfullscreen=""></iframe>
+    </section>
+
+    <section id="movies">
+      <h2>🎬 Фильмы и аниме</h2>
+      <p>Вот таблица с фильмами и аниме, которые я посмотрел летом:</p>
+      <iframe src="https://docs.google.com/spreadsheets/d/1FrlbChg_kUTJQKIUto_CMqMo69Tx1ZvdQDR-geRg0qk/edit?gid=1879491127#gid=1879491127"></iframe>
+    </section>
+
+    <section id="it">
+      <h2>💻 IT-штуки</h2>
+      <ul>
+        <li>Переустановил Windows</li>
+        <li>Скачал моды для игр</li>
+        <li>Экспериментировал с нейросетями</li>
+      </ul>
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Windows">
+    </section>
+
+    <section id="work">
+      <h2>😅 Работа</h2>
+      <p>Летом я работал в такси. Было тяжело, но зато интересно.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/296/296216.png" alt="Такси">
+    </section>
+
+    <section id="proud">
+      <h2>🏆 Похвастаться</h2>
+      <ul>
+        <li>Сдал на права 🚘</li>
+        <li>Купил машину</li>
+        <li>Стал личным водителем</li>
+        <li>Напился 🍻</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Права и машина">
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Как я провёл лето | Сделано с ❤️</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
